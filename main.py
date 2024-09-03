@@ -1,7 +1,6 @@
-from csv import reader
-from collections import defaultdict
 import time
-
+from collections import defaultdict
+from csv import reader
 from pathlib import Path
 
 
@@ -24,7 +23,7 @@ def processar_temperaturas(path_do_txt: Path):
             'Roseau': [34.4],
             'Conakry': [31.2],
         }
-        O uso de defaultdict do módulo collections é uma escolha conveniente 
+        O uso de defaultdict do módulo collections é uma escolha conveniente
         Sem o defaultdict, o código para adicionar uma temperatura iria parecer com isso:
         if nome_da_station not in temperatura_por_station:
             temperatura_por_station[nome_da_station] = []
@@ -75,4 +74,3 @@ if __name__ == "__main__":
     path_do_txt: Path = Path("data/measurements.txt")
     # 100M > 5 minutos.
     resultados = processar_temperaturas(path_do_txt)
- 
